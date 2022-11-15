@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #23242a;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: rgb(255 255 255 / 90%) 0px 0px 20px 5px;
+    border-radius: 15px;
+    padding: 60px;
+    width: 20%;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+h1{
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.labelInput{
+    position: absolute;
+    color: white;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+   top: -20px;
+   font-size: 12px; 
+}
+#submit{
+    background-color: #191970;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: #7373ff;
+}
+a{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;  
+    text-decoration: none;
+}
+a:hover{
+    background-color: #7373ff;
+}
+
+@media (min-width: 360px) and (max-width: 1024px) {
+    .box{
+        padding: 40px;
+        width: 60%;
+    }
+}
