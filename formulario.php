@@ -47,5 +47,7 @@
 			<input type="submit" name="submit" id="submit" value="CRIAR">
 		</form>
 	</div>
+    <script src="js/sweetalert2.js"></script>
+	<script src="js/custom.js"></script>
 </body>
 </html>
