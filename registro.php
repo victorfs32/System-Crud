@@ -38,7 +38,7 @@ body{
     text-align: center;
 }
 .table-bg{
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 15px 15px 0 0;
     font-family: 'Poppins', sans-serif;
 }
