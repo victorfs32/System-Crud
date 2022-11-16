@@ -54,10 +54,6 @@
 				<span>Senha</span>
 				<i></i>
 			</div>
-			<div class="links">
-				<a href="#">Esqueci a senha?</a>
-				<a href="formulario.php">Cadastrar</a>
-			</div>
             <input type="hidden" name="id" value="<?php echo $id ?>">
             <input type="submit" name="update" id="submit" value="SALVAR">
 		</form>
