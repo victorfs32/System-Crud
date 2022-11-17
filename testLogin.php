@@ -1,6 +1,5 @@
 <?php
     session_start();
-    // print_r($_REQUEST);
     if(isset($_POST['submit']) && !empty($_POST['nome']) && !empty($_POST['senha']))
     {
         // Acessa
@@ -8,16 +7,14 @@
         $nome = $_POST['nome'];
         $senha = $_POST['senha'];
 
-        // print_r('Email: ' . $email);
-        // print_r('<br>');
-        // print_r('Senha: ' . $senha);
-
         $sql = "SELECT * FROM usuarios WHERE nome = '$nome' and senha = '$senha'";
 
         $result = $conexao->query($sql);
 
-        // print_r($sql);
-        // print_r($result);
+        if($result==true){
+            print "<script>alert('Acesso Liberado Com Sucesso');</script>";
+            print "<script>location.href='sistema.php';</script>";
+        }
 
         if(mysqli_num_rows($result) < 1)
         {
@@ -29,7 +26,6 @@
         {
             $_SESSION['nome'] = $nome;
             $_SESSION['senha'] = $senha;
-            header('Location: sistema.php');
         }
     }
     else

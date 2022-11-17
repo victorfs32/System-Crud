@@ -10,8 +10,14 @@
 
         $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email) 
         VALUES ('$nome','$senha','$email')");
-
-        header('Location: login.php');
+        
+        if($result==true){
+            print "<script>alert('Cadastrado Com Sucesso');</script>";
+            print "<script>location.href='login.php';</script>";
+        }else{
+            print "<script>alert('Não foi possivel salvar');</script>";
+            print "<script>location.href='login.php';</script>";
+        }
     }
 
 ?>

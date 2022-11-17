@@ -13,7 +13,14 @@
         WHERE id=$id";
         $result = $conexao->query($sqlInsert);
         print_r($result);
+
+        if($result==true){
+            print "<script>alert('Salvo com sucesso');</script>";
+            print "<script>location.href='registro.php';</script>";
+        }else{
+            print "<script>alert('Não foi possivel salvar');</script>";
+            print "<script>location.href='registro.php';</script>";
+        }
     }
-    header('Location: registro.php');
 
 ?>
